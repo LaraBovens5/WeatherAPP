@@ -1,0 +1,89 @@
+body {
+  font-family: "Khand", sans-serif;
+  background: #e9d8a6;
+  background-image: url("https://source.unsplash.com/1600x900/?weather");
+}
+.container {
+  background: rgb(250, 248, 248, 0.5);
+  padding: 2em;
+  border-radius: 30px;
+  width: 100%;
+  max-width: 420px;
+  margin: 1em;
+}
+.search-bar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.searchButton {
+  margin: 0.5em;
+  border-radius: 50%;
+  border: none;
+  height: 44px;
+  width: 44px;
+  outline: none;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+}
+input.searchBar {
+  border: none;
+  outline: none;
+  padding: 1em 1em;
+  border-radius: 24px;
+  width: calc(100% - 100px);
+}
+.currentCity {
+  margin: 0.3em;
+  border-radius: 24px;
+  border: none;
+  outline: none;
+  font-size: 80%;
+  cursor: pointer;
+  transition: 0.2s ease-in-out;
+  height: 20px;
+}
+.city {
+  text-align: center;
+  margin: 0;
+}
+.text {
+  margin-bottom: 0;
+}
+.dayTime {
+  text-align: center;
+  padding: 0;
+  margin: 0;
+}
+.temperature {
+  text-align: center;
+}
+.currentTemp {
+  font-size: 350%;
+}
+.minMax {
+  text-align: center;
+}
+.max {
+  padding-left: 10px;
+}
+.iconDescription {
+  display: flex;
+  align-items: center;
+}
+.decription {
+  margin-left: 8px;
+}
+.celsius,
+.fahrenheit {
+  text-decoration: none;
+}
+.celsius {
+  color: black;
+}
+.fahrenheit {
+  color: gray;
+}
+.fahrenheit:hover {
+  color: black;
+}
