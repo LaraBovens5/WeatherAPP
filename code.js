@@ -68,6 +68,12 @@ function search(event) {
 
     currentMinTemp.innerHTML = `Min: ${minTemp}°C`;
     currentMaxTemp.innerHTML = `Max: ${maxTemp}°C`;
+
+    let iconElement = document.querySelector(".icon");
+    iconElement.setAttribute(
+      "src",
+      `https://openweathermap.org/img/wn/${response.data.weather[0].icon}@2x.png`
+    );
   }
   axios.get(apiUrl).then(searchTemperature);
 }
