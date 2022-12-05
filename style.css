@@ -82,7 +82,7 @@ input.searchBar {
   color: black;
 }
 .fahrenheit {
-  color: gray;
+  color: rgb(70, 65, 65);
 }
 .fahrenheit:hover {
   color: black;
