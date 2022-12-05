@@ -44,6 +44,8 @@ function search(event) {
     let country = response.data.sys.country;
     city.innerHTML = `${searchInput.value}, ${country}`;
 
+    celsiusTemperature = response.data.main.temp;
+
     let currentCityTemperature = Math.round(response.data.main.temp);
     let currentTemperature = document.querySelector(".currentTemp");
     currentTemperature.innerHTML = `${currentCityTemperature}`;
@@ -80,6 +82,27 @@ function search(event) {
 
 let form = document.querySelector("#search-bar");
 form.addEventListener("submit", search);
+
+// Unit conversion
+function displayFahrenheitTemperature(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector(".currentTemp");
+  let fahrenheitTemperature = (celsiusTemperature * 9) / 5 + 32;
+  temperatureElement.innerHTML = Math.round(fahrenheitTemperature);
+}
+function displayCelsiusTemperature(event) {
+  event.preventDefault();
+  let temperatureElement = document.querySelector(".currentTemp");
+  temperatureElement.innerHTML = Math.round(celsiusTemperature);
+}
+
+let celsiusTemperature = null;
+
+let fahrenheitLink = document.querySelector(".fahrenheit");
+fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
+
+let celsiusLink = document.querySelector(".celsius");
+celsiusLink.addEventListener("click", displayCelsiusTemperature);
 
 // Geolocation API
 function showPosition(position) {
