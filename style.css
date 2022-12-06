@@ -1,7 +1,7 @@
 body {
   font-family: "Khand", sans-serif;
   background: #e9d8a6;
-  background-image: url("https://source.unsplash.com/1600x900/?weather");
+  // background-image: url("https://source.unsplash.com/1600x900/?weather"); //
 }
 .container {
   background: rgb(250, 248, 248, 0.5);
