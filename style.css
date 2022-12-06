@@ -87,3 +87,17 @@ input.searchBar {
 .fahrenheit:hover {
   color: black;
 }
+.weather-forecast {
+  margin-top: 20px;
+  color: #000;
+}
+.forecast-date {
+  font-size: 16px;
+  opacity: 0.5;
+}
+.forecast-min-temperature {
+  opacity: 0.5;
+}
+.forecast-temperatures {
+  font-size: 13px;
+}
