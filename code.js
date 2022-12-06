@@ -22,6 +22,35 @@ let day = days[now.getDay()];
 
 dateTime.innerHTML = `${day}, ${hours}:${minutes}`;
 
+// Forecast
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let forecastHTML = `<div class="row">`;
+  let days = ["Thu", "Fri", "Sat", "sun"];
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+         <div class="col-2">
+            <div class="forecast-date">${day}</div>
+            <img
+              src="https://openweathermap.org/img/wn/04n.png"
+              alt="weather description icon"
+              width="42"
+            />
+            <div class="forecast-temperatures">
+              <span class="forecast-max-temperature"> 18°</span>
+              <span class="forecast-min-temperature">12°</span>
+            </div>
+          </div>
+        `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+}
+
 // Weather API
 function search(event) {
   event.preventDefault();
@@ -120,3 +149,5 @@ function showCurrentPosition() {
 }
 let button = document.querySelector("#currentyCity");
 button.addEventListener("click", showCurrentPosition);
+
+displayForecast();
